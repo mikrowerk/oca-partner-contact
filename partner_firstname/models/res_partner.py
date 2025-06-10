@@ -17,6 +17,8 @@ class ResPartner(models.Model):
 
     _inherit = "res.partner"
 
+    _rec_names_search = ['firstname', 'lastname', 'complete_name','email', 'ref', 'vat', 'company_registry']
+
     firstname = fields.Char("First name", index=True)
     lastname = fields.Char("Last name", index=True)
     name = fields.Char(
